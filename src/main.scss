@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla:wght@400;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.random-quote {
+  padding: 2.5rem;
+  background-color: #fafafa;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  min-height: 25rem;
+
+  &__text {
+    font-size: 2.7rem;
+    & span {
+      font-size: 2rem;
+      &:first-child {
+        margin-right: 1rem;
+      }
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__author {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    text-align: right;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  all: unset;
+  background-color: currentColor;
+  padding: .5rem .6rem;
+  cursor: pointer;
+
+  &__text {
+    color: #fafafa;
+
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+}
